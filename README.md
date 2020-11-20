@@ -17,3 +17,4 @@
 
 * Try to maintain the wiki page documenting any contributions made.
 
+* Update this README.md when work on any microservice gets completed.
