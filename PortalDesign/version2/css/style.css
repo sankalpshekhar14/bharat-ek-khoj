@@ -16,7 +16,7 @@
 
 .bg-primary-color
 {
-    background-color:var(--primary-color);   
+    background-color:var(--primary-color);
 }
 
 .text-color
@@ -134,5 +134,85 @@ input[type="text"]
 .product-add-cart a{
     border-radius:2px;
     font-size: 11px;
-    
+
+}
+#footer
+{
+  background-color: #43a9eb;
+  color: #ffffff;
+  text-align: center;
+}
+
+#footer a
+{
+  color: #ffffff;
+}
+
+#templatemo_content a
+{
+  color: #43a9eb;
+}
+
+#templatemo_content
+{
+  text-align: center;
+  color: #43a9eb;
+  font-size: 14px;
+}
+
+#templatemo_content h1
+{
+  color: black;
+}
+
+#templatemo_para
+{
+  color: black;
+  text-align: center;
+  font-size: 24px;
+}
+
+#templatemo_para strong
+{
+  color: #43a9eb;
+}
+
+.preview img
+{
+  height: 278px;
+  width: 128px;
+}
+
+.discount
+{
+  color: #ff0000;
+  font-size: 24px;
+}
+
+.blink_text {
+
+    animation:1s blinker linear infinite;
+    -webkit-animation:1s blinker linear infinite;
+    -moz-animation:1s blinker linear infinite;
+
+     color: red;
+    }
+
+    @-moz-keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @-webkit-keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
 }
