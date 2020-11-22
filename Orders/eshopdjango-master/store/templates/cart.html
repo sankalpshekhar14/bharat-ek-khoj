@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{% load cart %}
+{% load custom_filter %}
+<div class="container">
+   <div class="border rounded p-4 m-4">
+        <p class="display-4 pl-4 ml-4">Your Cart</p>
+        <hr>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Sno.</th>
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                {% for product in products %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td><img style="height: 80px;" class="rounded-circle" src="{{product.image.url}}" alt=""></td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.price|currency}}</td>
+                    <td>{{product|cart_quantity:request.session.cart}}</td>
+                    <td>{{product|price_total:request.session.cart|currency}}</td>
+                </tr>
+
+                {% endfor %}
+               
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <th colspan="4"></th>
+                    <th class="" colspan="">Total</th>
+                    <th>{{products|total_cart_price:request.session.cart|currency}}</th>
+                </tr>
+            </tfoot>
+        </table>
+        <hr>
+        <div class="m-3 p-3">
+            <a href="#" data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-info border rounded  col-lg-3 float-right">Check out</a>
+        </div>
+   </div>
+</div>
+
+
+<!-- modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+              Check Out Form
+          </h5>
+          <hr>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="m-2 p-3">
+            <form action="/check-out" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                  <label for="">City</label>
+                  <input type="text" name="city" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                  
+                </div>
+                <div class="form-group">
+                  <label for="">State</label>
+                  <input type="text" name="state" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                  
+                </div>
+                <div class="form-group">
+                  <label for="">PinCode</label>
+                  <input type="text" name="pincode" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                  
+                </div>
+                <div class="form-group">
+                  <label for="">Address line1</label>
+                  <input type="text" name="addressline1" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                  
+                </div>
+                <div class="form-group">
+                  <label for="">Address line2</label>
+                  <input type="text" name="addressline2" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                  
+                </div>
+                <div class="form-group">
+                    <label for="">Phone</label>
+                    <input type="text" name="phone" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                  </div>
+
+                  <input onclick="myFunction1()" type="submit" class="btn float-right btn-outline-info col-lg-6" value="Place Order (For Developer)">
+
+                  <div id="paypal-button-container" type="submit"></div>
+                  <script src="https://www.paypal.com/sdk/js?client-id=AZY7_R_zP9kFMURQqtXCGtwttgQL3WRjTSs78aH2oQPk4Lc9QGsP8A9qx-poyHR5xGL3O0EJtqouv3QI&currency=INR"></script>
+
+                  <script>
+                    // Render the PayPal button into #paypal-button-container
+                    var total = '{{products|total_cart_price:request.session.cart}}'
+                    paypal.Buttons({
+
+                    // Set up the transaction
+                    createOrder: function(data, actions) {
+                      return actions.order.create({
+                        purchase_units: [{
+                            amount: {
+                                value: parseFloat(total).toFixed(2)
+                            }
+                        }]
+                      });
+                    },
+
+                    // Finalize the transaction
+                    onApprove: function(data, actions) {
+                      return actions.order.capture().then(function(details) {
+                        // Show a success message to the buyer
+                        alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                      });
+                    }
+
+
+                }).render('#paypal-button-container');
+                </script>
+
+                 <script>
+                      function myFunction1() {
+                        //return confirm('Do you really want to submit the form?');
+                          alert("Order Successfully Placed!\nThank You!!!");
+                      }
+                </script>
+            </form>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+
+{% endblock %}
