@@ -1,5 +1,5 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,9 +19,9 @@
 
     <!--Custom StyleSheet-->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/tile.css">
 </head>
 <body>
-
     <header>
         <div class="container-fluid">
             <div class="row">
@@ -54,9 +54,8 @@
                 </div>
                 <div class="col-md-4 col-12 text-right">
                     <p class="my-md-4 header-links">
-                        <a href="./login.html" class="px-4">Login</a>
-                        <a href="./register.html" class="px-3">Create New Account</a>
-                        <a href="./index.html" class="px-3">Home</a>
+                        <a href="#" class="px-4">Login</a>
+                        <a href="#" class="px-3">Create New Account</a>
                         <a href="#" class="px-1"><i class="fas fa-shopping-cart"></i></a>
                     </p>
                 </div>
@@ -88,22 +87,22 @@
                         <a class="nav-link" href="featured.html">Featured</a>
                       </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="./new_arrival.html">New Arrivals</a>
+                      <a class="nav-link" href="new_arrival.html">New Arrivals</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="./pre_order.html">PreOrder</a>
+                      <a class="nav-link" href="pre_order.html">PreOrder</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="bestseller.html">BestSellers</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="offers.html">Offers</a>
+                        <a class="nav-link" href="#">Offers</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Our Platform</a>
+                        <a class="nav-link" href="#">About Our Platform</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
+                        <a class="nav-link" href="#">Contact Us</a>
                     </li>
                   </ul>
                   <form class="form-inline my-14 my-lg-0">
@@ -114,7 +113,8 @@
               </nav>
         </div>
     </header>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <main>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -140,46 +140,46 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-
-
-    <h1><span class="fa fa-sign-in"></span> Login</h1>
-
-
-
-    <!-- LOGIN FORM -->
-    <form action="/login" method="post">
-        <div class="form-group">
-            <label>Username</label>
-            <input type="text" class="form-control" name="name">
-        </div>
-        <div class="form-group">
-            <label>Email</label>
-            <input type="text" class="form-control" name="email">
-        </div>
-        <div class="form-group">
-            <label>Password</label>
-            <input type="password" class="form-control" name="password">
-        </div>
-
-
-        <button type="submit" class="btn btn-warning btn-lg">Login</button>
-    </form>
-
-    <hr>
-
-
-    <p>Need an account? <a href="register.html">Signup</a></p>
-
-
-
-
-</div>
-
-</div>
-<div id="footer">
-     <a href="index.html">Home&nbsp;&nbsp;</a> | <a href="about.html">&nbsp;&nbsp;About Us&nbsp;&nbsp;</a> | <a href="contact.html">&nbsp;&nbsp;Contact</a><br />
-    Copyright © 2024 <a href="index.html"><strong>Bharat Ek Khoj</strong></a>
-    <!-- Credit: www.templatemo.com -->
-</div> <!-- end of footer -->
+      <div id="container" class="cols">
+          <div class="box" id="f"><strong><a href="fiction.html">Fiction</a></div>
+          <div class="box" id="r"><a href="religious.html">Religious</a></div>
+          <div class="box" id="h"><a href="history.html">History</a></div>
+          <div class="box" id="p"><a href="poetry.html">Poetry</a></div>
+          <div class="box" id="ph"><a href="philosophy.html">Philosophy</a></div>
+          <div class="box" id="m"><a href="mythology.html">Mythology</a></div>
+          <div class="box" id="c">Classics</div>
+          <div class="box" id="a">Action and Adventure</div>
+          <div class="box" id="g">Graphic Novel</div>
+          <div class="box" id="my">Mystery</div>
+          <div class="box" id="hr">Horror</div>
+          <div class="box" id="r">Romance</div>
+          <div class="box" id="s">Short Stories</div>
+          <div class="box" id="st">Suspense and Thrillers</strong></div>
+      </div>
+    </main>
+    <script
+     src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+     crossorigin="anonymous">
+    </script>
+    <script
+     src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+     crossorigin="anonymous">
+    </script>
+    <script
+     type="text/javascript"
+     src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js">
+    </script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous">
+    </script>
+    <div id="footer">
+	       <a href="index.html">Home&nbsp;&nbsp;</a> | <a href="about.html">&nbsp;&nbsp;About Us&nbsp;&nbsp;</a> | <a href="contact.html">&nbsp;&nbsp;Contact</a><br />
+        Copyright © 2024 <a href="index.html"><strong>Bharat Ek Khoj</strong></a>
+        <!-- Credit: www.templatemo.com -->
+	  </div> <!-- end of footer -->
 </body>
 </html>
