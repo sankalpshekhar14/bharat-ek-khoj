@@ -1,0 +1,161 @@
+/*import fonts from google font */
+@import url('https://fonts.googleapis.com/css?family=Anton|Gugi|Lato|Roboto|Sofia&display=swap');
+:root{
+    --primary-color:#5db2eb;
+    --border:#2b303218;
+    --text-color:#bb1c1f;
+    --light-gray:#545d61a1;
+    --roboto:"Roboto",sans-serif;
+    --gugi:"Gugi",cursive;
+    --sofia:"Sofia",cursive;
+}
+
+.primary-color{
+    color:var(--primary-color)
+}
+
+.bg-primary-color
+{
+    background-color:var(--primary-color);   
+}
+
+.text-color
+{
+    color:var(--text-color);
+}
+
+.font-roboto{
+    font-family:var(--roboto);
+}
+
+/* header*/
+header{
+    background-color:var(--primary-color);
+    font-family:var(--roboto);
+}
+
+header.site-title
+{
+    font-family:var(--gugi);
+    background-image:linear-gradient(to left,#ff9933,#ffffff,#138808);
+    background-clip: var(--text-color);
+}
+
+.container.dropdown-toggle
+{
+    font-size:1em;
+}
+
+.container.dropdown-item
+{
+    font-size:1em;
+}
+
+.header-links a{
+    font-size:1.1em;
+    text-decoration: none;
+    color:white;
+}
+
+.navbar-nav
+{
+    padding:0.8em 0em;
+}
+
+.navbar-nav .nav-link
+{
+    font-size:1.2em;
+    color:rgb(17, 28, 184) !important;
+}
+
+.navbar-nav .nav-item .nav-link
+{
+    padding:0 0.6em
+}
+
+.dropdown:hover>.dropdown-menu
+{
+    display: block;
+    background-color:var(--primary-color);
+    color: white;
+}
+
+.dropdown >.dropdown-toggle
+{
+    border-radius: 15px;
+}
+.navbar-nav .dropdown-menu >
+{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+::-webkit-input-placeholder
+{
+    text-align: center;
+}
+
+input[type="text"]
+{
+    border-radius:10px;
+}
+
+.carousel-inner
+{
+    width:fit-content;
+    height:500px !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom:10px ;
+    margin-bottom: auto;
+}
+
+.position-top
+{
+    position: absolute;
+    top:45%;
+}
+
+.product{
+    margin-bottom:5px;
+}
+
+.product-part{
+    margin:0px;
+    border:1px solid #DDDDDD;
+    background-color: #fff;
+    padding-bottom: 10px;
+}
+
+.img-section{
+    padding: 0px;
+}
+
+.product-title h1{
+    margin:0px;
+    color:#4C4C4C;
+    font-size:23px;
+    padding: 5px 0px;
+}
+.product-description{
+    padding: 3px 15px;
+}
+.product-description p{
+    color:#848484;
+}
+.product-cart p{
+    font-size:20px;
+    color:#4C4C4C;
+}
+.product-add-cart a{
+    border-radius:2px;
+    font-size: 11px;
+    
+}
+
+.footer
+{
+    margin-left:650px !important;
+    display: block;
+}
