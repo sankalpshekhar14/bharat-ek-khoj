@@ -11,7 +11,7 @@
   * Help and Support
   * Recommender System
   * Marketing
-  * UI
+  * Portal Design
 
 * Create a Folder for each Microservice, and maintain a separate README for it.
 
